@@ -7,9 +7,12 @@ import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import IconArchive from "@/assets/icons/IconArchive.svg";
+import IconDiscordStroke from "@/assets/icons/IconDiscordStroke.svg";
+
 import { SITE } from "@/config";
 
-interface Social {
+export interface Social {
   name: string;
   href: string;
   linkTitle: string;
@@ -23,11 +26,24 @@ export const SOCIALS: Social[] = [
     linkTitle: `${SITE.title} on GitHub`,
     icon: IconGitHub,
   },
+
+  {
+    name: "Discord",
+    href: "https://discord.gg/6NJhCuPG",
+    linkTitle: "Discord",
+    icon: IconDiscordStroke,
+  },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/drazenbuljovcic/",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
+  },
+  {
+    name: "Letter",
+    href: "https://drive.google.com/file/d/1cBvvH94DmbX1mE5gAA6dtFRyZG2wILQe/view?usp=sharing",
+    linkTitle: `Online presence`,
+    icon: IconArchive,
   },
   {
     name: "Mail",
