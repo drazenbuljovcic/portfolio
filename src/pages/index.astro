@@ -3,14 +3,14 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-// import Socials from "@/components/Socials.astro";
+import Socials from "@/components/Socials.astro";
 // import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 // import IconRss from "@/assets/icons/IconRss.svg";
 // import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 // import { SITE } from "@/config";
-// import { SOCIALS } from "@/constants";
+import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
 
@@ -18,8 +18,7 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 // const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
-const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.length / num)}, (_, i) => arr.slice(i * 2, i * 2 + 2));
-
+// const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.length / num)}, (_, i) => arr.slice(i * 2, i * 2 + 2));
 ---
 
 <Layout>
@@ -32,7 +31,7 @@ const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.len
 
       <p class:list={["text-3xl", "mb-2"]}>Software Engineer</p>
 
-      <!-- <div class:list={["mt-5"]}>
+      <div class:list={["mt-5"]}>
         {
           // only display if at least one social link is enabled
           SOCIALS.length > 0 && (
@@ -41,7 +40,7 @@ const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.len
             </div>
           )
         }
-      </div> -->
+      </div>
     </section>
 
     <section id="portfolio" class="pt-8 pb-6">
@@ -81,7 +80,9 @@ const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.len
         >
           <h3 class="mb-2 text-xl font-semibold">Developer Experience</h3>
           <p>
-            Owning large scale decisions that impact on the developer workflow apparent and tackled for efficient release cadence. Plus observability.
+            Owning large scale decisions that impact on the developer workflow
+            apparent and tackled for efficient release cadence. Plus
+            observability.
           </p>
         </div>
 
@@ -89,9 +90,7 @@ const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.len
           class="rounded-lg border border-border p-6 transition-colors hover:border-accent"
         >
           <h3 class="mb-2 text-xl font-semibold">Harness Engineering</h3>
-          <p>
-            Elevating Engineering using Agentic development practices.
-          </p>
+          <p>Elevating Engineering using Agentic development practices.</p>
         </div>
 
         <div
@@ -108,18 +107,14 @@ const chunk = (arr: unknown[], num = 2) => Array.from({length: Math.ceil(arr.len
 
     {
       featuredPosts.length > 0 && (
-        <section
-          id="featured"
-          class:list={[
-            "pt-12 pb-6",
-          ]}
-        >
-          <h2 class="text-2xl font-semibold tracking-wide text-center pb-0.5 border-border">What I've been up to</h2>
+        <section id="featured" class:list={["pt-12 pb-6"]}>
+          <h2 class="border-border pb-0.5 text-center text-2xl font-semibold tracking-wide">
+            What I've been up to
+          </h2>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
             ))}
-
           </ul>
         </section>
       )
