@@ -36,7 +36,7 @@ export const SOCIALS: Social[] = [
   {
     name: "Letter",
     href: "https://drive.google.com/file/d/1cBvvH94DmbX1mE5gAA6dtFRyZG2wILQe/view?usp=sharing",
-    linkTitle: `Online presence`,
+    linkTitle: `Online Presence`,
     icon: IconArchive,
   },
   {
