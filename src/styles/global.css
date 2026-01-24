@@ -7,9 +7,9 @@
 html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --accent: #015eff;
+  --muted: #343f60;
+  --border: #077fab;
 }
 
 html[data-theme="dark"] {
