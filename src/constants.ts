@@ -4,6 +4,7 @@ import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconDiscordStroke from "@/assets/icons/IconDiscordStroke.svg";
+import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 
 import { SITE } from "@/config";
 
@@ -49,8 +50,14 @@ export const SOCIALS: Social[] = [
 
 export const SHARE_LINKS: Social[] = [
   {
-    name: "Discord",
+    name: "Whatsapp",
     href: "https://wa.me/?text=",
+    linkTitle: `Share this post via Whatsapp`,
+    icon: IconWhatsapp,
+  },
+  {
+    name: "Discord",
+    href: "https://discord.gg/6NJhCuPG",
     linkTitle: `Share this post via Discord`,
     icon: IconDiscordStroke,
   },

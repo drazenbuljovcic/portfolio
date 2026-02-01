@@ -7,18 +7,34 @@ const URL = Astro.url;
 
 {
   SHARE_LINKS.length > 0 && (
-    <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
-      <span class="italic">Share this post via</span>
-        {SHARE_LINKS.map(social => (
+    <>
+      <div class="w-full">
+        <span class="line-clamp-1 inline italic">Share this post via</span>
+        {[SHARE_LINKS[0]].map(social => (
           <LinkButton
             href={`${social.href + URL}`}
-            class="scale-90 p-2 hover:rotate-6 sm:p-1"
+            class="ml-2 scale-110 p-2 hover:rotate-6 sm:p-3"
             title={social.linkTitle}
           >
-            <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+            <social.icon class="size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
             <span class="sr-only">{social.linkTitle}</span>
           </LinkButton>
         ))}
-    </div>
+      </div>
+
+      <div class="w-full">
+        <span class="b-400 line-clamp-1 inline italic">Join the community</span>
+        {[SHARE_LINKS[1]].map(social => (
+          <LinkButton
+            href={`${social.href + URL}`}
+            class="ml-2 scale-110 p-2 pl-2 hover:rotate-6 sm:p-3"
+            title={social.linkTitle}
+          >
+            <social.icon class="size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+            <span class="sr-only">{social.linkTitle}</span>
+          </LinkButton>
+        ))}
+      </div>
+    </>
   )
 }

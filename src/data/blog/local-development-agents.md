@@ -1,7 +1,7 @@
 ---
 author: zen
-pubDatetime: 2022-09-23T15:22:00Z
-modDatetime: 2025-06-13T16:52:45.934Z
+pubDatetime: 2026-02-01T00:00:00Z
+modDatetime: 2026-02-01T00:00:00Z
 title: Local Development Agents
 slug: local-development-agents
 featured: true

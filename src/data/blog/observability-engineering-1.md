@@ -1,8 +1,9 @@
 ---
 author: zen
-pubDatetime: 2022-09-23T15:22:00Z
-modDatetime: 2025-06-13T16:52:45.934Z
+pubDatetime: 2026-01-26T00:00:00Z
+modDatetime: 2026-01-26T00:00:00Z
 title: Observability Engineering
+hrefOptional: https://github.com/drazenbuljovcic/infrastructure-client-application/issues/1
 slug: observability-engineering
 featured: true
 draft: false
@@ -13,4 +14,4 @@ description: Case study
 
 ### Observability Engineering
 
-Case study
+See on Github: [🖇️](https://github.com/drazenbuljovcic/infrastructure-client-application/issues/1)
