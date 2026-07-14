@@ -24,7 +24,7 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "Discord",
-    href: "https://discord.gg/6NJhCuPG",
+    href: "https://discord.gg/UNugEZZtd",
     linkTitle: "Discord",
     icon: IconDiscordStroke,
   },
@@ -57,7 +57,7 @@ export const SHARE_LINKS: Social[] = [
   },
   {
     name: "Discord",
-    href: "https://discord.gg/6NJhCuPG",
+    href: "https://discord.gg/UNugEZZtd",
     linkTitle: `Share this post via Discord`,
     icon: IconDiscordStroke,
   },
