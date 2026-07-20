@@ -4,7 +4,7 @@ pubDatetime: 2026-02-01T00:00:00Z
 modDatetime: 2026-02-01T00:00:00Z
 title: Local Development Agents
 slug: local-development-agents
-featured: true
+featured: false
 draft: false
 tags:
   - docs
